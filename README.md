@@ -10,7 +10,7 @@ A buildless, bilingual landing page that is ready for Cloudflare Pages direct up
 
 ## Before production launch
 
-The page's lead form validates visitors' details and shows the direct phone number supplied in the brief. It deliberately does not submit data to an invented email address or third-party endpoint. Connect the `submit` handler near the bottom of `index.html` to the preferred Cloudflare Pages Function, CRM, or inbox to store/send leads.
+The contact section shows the phone number and `info@levavi.online`. The lead form validates the details and opens the visitor's email app with a draft addressed to that inbox; the visitor must send the message from their email app. The form does not independently store or send submissions. Connect the `submit` handler near the bottom of `index.html` to the preferred Cloudflare Pages Function or CRM if direct browser-based submission is required.
 
 The language picker persists a visitor's choice locally, switches all provided copy in place, and applies RTL direction for Hebrew.
 
