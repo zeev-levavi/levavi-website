@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b111e" />
+    <title>Accessibility statement | Aviv-Levavi</title>
+    <style>
+      * { box-sizing: border-box; }
+      html { background: #060913; color: #f8fbff; }
+      body { margin: 0; font-family: Arial, sans-serif; line-height: 1.75; }
+      .shell { width: min(850px, calc(100% - 40px)); margin: auto; }
+      header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; border-bottom: 1px solid #425063; }
+      .brand { font-size: 22px; font-weight: bold; text-decoration: none; }
+      a { color: #a8eaff; text-underline-offset: 4px; }
+      .brand { color: #f8fbff; }
+      :focus-visible { outline: 3px solid #8be7ff; outline-offset: 4px; }
+      main { padding: 65px 0 80px; min-height: 65vh; }
+      h1 { margin: 0 0 24px; font-size: clamp(30px, 5vw, 44px); line-height: 1.2; }
+      p { color: #d3e0eb; max-width: 70ch; margin: 0 0 18px; }
+      .updated { color: #b6c6d6; font-size: 14px; }
+      footer { padding: 22px 0; border-top: 1px solid #425063; color: #b6c6d6; font-size: 14px; }
+    </style>
+    <script>
+      try {
+        if (localStorage.getItem('aviv-language') === 'he') {
+          document.documentElement.lang = 'he';
+          document.documentElement.dir = 'rtl';
+        }
+      } catch (_) {}
+    </script>
+  </head>
+  <body>
+    <header class="shell">
+      <a class="brand" href="./">Aviv-Levavi</a>
+      <a href="./" data-en="Back to home" data-he="חזרה לדף הבית">Back to home</a>
+    </header>
+    <main class="shell">
+      <h1 data-en="Accessibility statement" data-he="הצהרת נגישות">Accessibility statement</h1>
+      <p data-en="We are working to improve this website’s accessibility. The website supports keyboard navigation and reduced-motion settings. A comprehensive accessibility review has not yet been completed." data-he="אנו פועלים לשיפור נגישות האתר. האתר תומך בניווט באמצעות מקלדת ובהעדפת מערכת לצמצום תנועה. בדיקת נגישות מקיפה טרם הושלמה.">We are working to improve this website’s accessibility. The website supports keyboard navigation and reduced-motion settings. A comprehensive accessibility review has not yet been completed.</p>
+      <p data-en="If you encounter an accessibility problem or need information in an accessible format, please contact us and describe the page and the difficulty." data-he="נתקלתם בקושי בנגישות או זקוקים למידע בפורמט נגיש? צרו איתנו קשר ותארו את העמוד ואת הקושי.">If you encounter an accessibility problem or need information in an accessible format, please contact us and describe the page and the difficulty.</p>
+      <p><a href="mailto:info@levavi.online">info@levavi.online</a> · <a href="tel:+972543976206" dir="ltr">+972-54-397-6206</a></p>
+      <p class="updated" data-en="Last updated: 16 November 2026" data-he="עדכון אחרון: 16 בנובמבר 2026">Last updated: 16 November 2026</p>
+    </main>
+    <footer><div class="shell">© Aviv-Levavi</div></footer>
+    <script>
+      if (document.documentElement.lang === 'he') {
+        document.title = 'הצהרת נגישות | אביב-לבבי';
+        document.querySelectorAll('[data-he]').forEach((item) => { item.textContent = item.dataset.he; });
+      }
+    </script>
+  </body>
+</html>
